@@ -1,9 +1,9 @@
-
 import React, { Component } from 'react'
+import DropdownComponent from './DropDown'
+import GridComponent from './Grid'
+
 
 class DcLocations extends Component {
-
-
   render() {
     return (
       <div className="container">
@@ -14,14 +14,14 @@ class DcLocations extends Component {
         </div>
 
         <div className="row">
-          <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-          </div>
-
-          <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-          </div>
+          <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <DropdownComponent />
+            </div>
         </div>
+
+       
+            <GridComponent/>
+          
       </div>
     )
   }

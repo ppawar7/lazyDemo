@@ -20,26 +20,29 @@ class Header extends React.Component {
     render() {
         return (
             <Router>
-                <Navbar color="indigo" dark expand="md" scrolling>
+               
+                <Navbar color="indigo" dark expand="lg" fixed="top"  scrolling>
                     <NavbarBrand href="/">
                         <strong>Home</strong>
                     </NavbarBrand>
                     {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
                     <Collapse isOpen={this.state.collapse} navbar>
                         <NavbarNav left>
-                            <NavItem active>
-                                <NavLink to="#">Home</NavLink>
-                            </NavItem>
                             <NavItem>
                                 <NavLink to="#">DCLocations</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink to="#">Pricing</NavLink>
+                                <NavLink to="#">About Us</NavLink>
                             </NavItem>
                            
                         </NavbarNav>
                        
                     </Collapse>
+                    <NavbarNav right>
+                          <NavItem>
+                          <NavLink className="nav-link" to="#" >welcome User</NavLink>
+                          </NavItem>
+                        </NavbarNav>
                 </Navbar>
             </Router>
         );
@@ -47,3 +50,9 @@ class Header extends React.Component {
 }
 
 export { Header }
+
+
+
+
+
+
