@@ -1,15 +1,38 @@
+
 import React from 'react';
 import { render } from 'react-dom';
-import { DcLocations } from './components/DcLocations';
+import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'react-router-redux'
+import { Route, HashRouter } from 'react-router-dom'
+
+
+
+import { AppComponent } from './components/App';
 import { Login } from './components/Login';
-import { Header } from './components/Header';
- 
+
+
 import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css'
+import 'mdbreact/dist/css/mdb.css'
+import '../assets/styles.css'
+
+import { store, history } from './store/index'
 
 
 const App = () => (
-   <Login/>
+    <Provider store={store}>
+        <HashRouter>
+            <ConnectedRouter history={history}>
+                <div>
+                    <Route path="/" exact component={Login} />
+                    <div className="mainContent">
+                      <AppComponent/>
+                    </div>
+                </div>
+            </ConnectedRouter>
+        </HashRouter>
+    </Provider>
 );
+
 render(<App />, document.getElementById("root"));

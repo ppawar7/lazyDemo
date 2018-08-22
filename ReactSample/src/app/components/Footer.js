@@ -2,9 +2,9 @@ import React from 'react';
 import { Col, Container, Row, Footer } from 'mdbreact';
 
 class FooterComponent extends React.Component {
-    render(){
-        return(
-           
+    render() {
+        return (
+
             <Footer color="indigo" className="page-footer font-small blue fixed-bottom" scrolling>
                 <div className="footer-copyright text-center py-3">
                     <Container fluid>
@@ -16,4 +16,4 @@ class FooterComponent extends React.Component {
     }
 }
 
-export default FooterComponent;
+export { FooterComponent } 

@@ -1,0 +1,10 @@
+
+.col-centered{
+    float:none;
+    margin:150px auto;
+}
+
+.mainContent { 
+    padding-top: 65px; 
+    padding-bottom: 65px; 
+}
