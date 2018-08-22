@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import DropdownComponent from './DropDown'
-import jobMockResponse from '../MockData/JobPostData'
+import { jobMockResponse } from '../MockData/JobPostData'
 import { GridComponent } from './Grid'
 
 class JobPostComponent extends Component {
 
-    render() {
+  render() {
     return (
       <div className="container">
         <div className="row">
@@ -13,7 +13,7 @@ class JobPostComponent extends Component {
             <h3 className="text-center">Infosys Developement Center</h3>
           </div>
         </div>
-        <GridComponent gridResponse={jobMockResponse}/>
+        <GridComponent gridResponse={jobMockResponse} />
       </div>
     )
   }
