@@ -3,7 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
-import { Route, HashRouter } from 'react-router-dom'
+import { Route, HashRouter,IndexRoute } from 'react-router-dom'
 
 
 
@@ -25,9 +25,8 @@ const App = () => (
         <HashRouter>
             <ConnectedRouter history={history}>
                 <div>
-                    <Route path="/" exact component={Login} />
                     <div className="mainContent">
-                      <AppComponent/>
+                      <AppComponent  />
                     </div>
                 </div>
             </ConnectedRouter>

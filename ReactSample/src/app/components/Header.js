@@ -26,7 +26,7 @@ class HeaderComponent extends React.Component {
     render() {
         return (
             <Navbar color="indigo" dark expand="lg" fixed="top" scrolling>
-                <NavbarBrand href="#/home">
+                <NavbarBrand href="#/">
                     <strong>Home</strong>
                 </NavbarBrand>
                 {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
